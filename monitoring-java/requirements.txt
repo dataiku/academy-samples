@@ -1,1 +1,2 @@
 dataiku-api-client
+pandas
