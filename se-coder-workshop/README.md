@@ -1,4 +1,4 @@
-SE CODER WORKSHOP WITH MLFLOW EXPRIMENT TRACKING
+SE CODER WORKSHOP WITH MLFLOW EXEPRIMENT TRACKING
 LAST TESTED ON DATAIKU CLOUD 12.5.1
 
 --------- Instructions setup --------------
@@ -6,7 +6,8 @@ LAST TESTED ON DATAIKU CLOUD 12.5.1
 Spin up a Trainer instance
 Add yourself and Workshop attendees
 
-The starter project can be found in this git repo 
+The starter project can be found in this (https://github.com/dataiku/academy-samples/tree/main/se-coder-workshop) git repo 
+The completed project can be found on Google Drive - 41_Sales_US/2_Sales_Engineering/Hands-on Workshop/Coder/[V12.5]
 The starter and completed project needs to be uploaded to the instance.
 
 A code env needs to be created on the instance with the following requirements:
