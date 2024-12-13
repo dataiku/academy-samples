@@ -1,6 +1,5 @@
 import dataiku
 import pandas as pd
-import openpyxl
 import io
 import pickle
 
