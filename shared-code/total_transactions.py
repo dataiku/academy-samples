@@ -1,4 +1,5 @@
 import pandas as pd
+import dataiku
 
 def monthly_total_transactions(df, date_col='PurchaseDate', marketplace_col='MerchantURL', quantity_col='Quantity', price_col='UnitPrice'):
     """
