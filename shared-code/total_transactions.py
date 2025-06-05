@@ -22,6 +22,12 @@ def monthly_total_transactions(df, date_col='PurchaseDate', marketplace_col='Mer
     except:
         return "Error: No DateTime"
 
+    # Ensure a numeric type for unit price
+    if df[price_col].dtype == 'object' or pd.api.types.is_string_dtype(df[price_col]):
+        # Convert to numeric (int or float)
+        df[price_col] = df[price_col].str.replace(',', '.', regex=False)  # Replace commas with dots
+        df[price_col] = pd.to_numeric(df[price_col], errors='coerce')
+    
     # Calculate transaction value
     df['transaction_value'] = df[quantity_col] * df[price_col]
 
