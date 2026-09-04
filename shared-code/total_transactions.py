@@ -1,7 +1,7 @@
 import pandas as pd
 import dataiku
 
-def monthly_total_transactions(df, date_col='PurchaseDate', marketplace_col='MerchantURL', quantity_col='Quantity', price_col='UnitPrice'):
+def monthly_total_transactions(df, date_col='PurchaseDate', marketplace_col='MerchantURL', quantity_col='Quantity', price_col='UnitPrice', format='%d/%m/%Y %H:%M'):
     """
     Groups transaction data by month and marketplace, and calculates total transaction value.
 
@@ -18,7 +18,7 @@ def monthly_total_transactions(df, date_col='PurchaseDate', marketplace_col='Mer
     # Ensure date column is datetime type
     try:
         df = df.copy()
-        df[date_col] = pd.to_datetime(df[date_col])
+        df[date_col] = pd.to_datetime(df[date_col], format=format)
     except:
         return "Error: No DateTime"
 
